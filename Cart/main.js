@@ -8,7 +8,6 @@ fetch("https://fakestoreapi.com/products")
   .then(function (data) {
     console.log(data)
     data.forEach(function (item) {
-        console.log(item)
       const item_product = document.createElement("div");
       item_product.classList.add("product__item");
       item_product.innerHTML = `<div class="product__img">
@@ -26,9 +25,18 @@ fetch("https://fakestoreapi.com/products")
                         </div>`;
         
         list_product.appendChild(item_product);
+
     });
+
   });
-console.log(input);
-input.oninput = function (e) {
-  console.log(e.target.value);
-};
+  input.oninput = function (e) {
+    const item_product = document.querySelectorAll('.product__item');
+    item_product.forEach(function(item) {
+        if(item.innerText.toLowerCase().includes(e.target.value.toLowerCase())) {
+            item.classList.remove('none')
+        }else {
+            item.classList.add('none')
+        }
+    })
+}
+

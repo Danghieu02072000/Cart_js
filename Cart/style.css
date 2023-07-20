@@ -104,3 +104,6 @@ body {
 .product__item:hover {
     background-color: #dadada;
 }
+.none {
+    display: none;
+}
