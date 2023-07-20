@@ -49,6 +49,8 @@ body {
 }
 .product__list {
     margin-top: 20px;
+    height: 475px;
+    overflow-y:scroll;
 }
 .product__item {
     display: flex;
@@ -73,6 +75,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-grow: 1;
 }
 .product__name {
     text-align: start;
@@ -89,8 +92,11 @@ body {
     display: flex;
     gap: 10px;
 }
+.product__rate i {
+    margin-left: 3px;
+}
 .product__rate {
-
+    font-weight: 700;
 }
 .product__count {
 
